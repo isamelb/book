@@ -407,6 +407,9 @@ var nature='In the video above I explain why nature heals us'
 
 var recognition_emotion= 'In the video above I explain why recognition of emotion present is very important'
 
+
+var appreciation='In the video above I hghlight the link between value, appreciation and gratitude'
+
 var arabic_reality ='حاول أن تعيش في الواقع وليس في عالمك الشخصي ، شاهد الفيديو لمزيد من الشرح \
  '
 
@@ -1653,6 +1656,17 @@ function submitquestion(){
 
 
 
+}else if (question.includes("value")||(question.includes("appreciation"))) {
+   document.getElementById("work").innerHTML = appreciation;
+   document.getElementById('frametest').src = "https://www.youtube.com/embed/McMae28KTIg?rel=0" ;
+   //document.getElementById("work").style.color = "red";
+  // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+
 }
 
 
@@ -1688,7 +1702,7 @@ function range(start, end) {
 
 function random_topic(){
 
-  var items =range(1,61);
+  var items =range(1,62);
 
   number_videos = items.length;
     document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -2179,7 +2193,18 @@ document.getElementById('frametest').src = "https://www.youtube.com/embed/vUE10r
 
 
 
+  }else if (item ===62) {
+     document.getElementById("work").innerHTML = appreciation;
+     document.getElementById('frametest').src ="https://www.youtube.com/embed/McMae28KTIg?rel=0"  ;
+     //document.getElementById("work").style.color = "red";
+    // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
   }
+
 
 
 
