@@ -568,6 +568,13 @@ var arabic_emotion_recognition='القدرة علئ تحديد عواطفك هي
  \
 '
 
+var arabic_appreciation='في الفديو اعلاه اربط بين الشكر و الثمن و القيمة \
+'
+
+
+
+
+
 function ChangeLanguage(){
 
 
@@ -625,7 +632,7 @@ function ChangeLanguage(){
 
 function arabic_random(){
 
-var items =range(1,35);
+var items =range(1,36);
 
 number_videos = items.length;
   document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -873,6 +880,13 @@ if (item ===1){
   }else if (item===35){
            document.getElementById("work").innerHTML = arabic_emotion_recognition
            document.getElementById('frametest').src ="https://www.youtube.com/embed/fDfZpU24PHc?rel=0"  ;
+           //document.getElementById("work").style.fontFamily= "Courier New";
+          // document.getElementById("work").style.color = "red";
+
+
+  }else if (item===36){
+           document.getElementById("work").innerHTML = arabic_appreciation
+           document.getElementById('frametest').src ="https://www.youtube.com/embed/ctGKBxCBqbk?rel=0"   ;
            //document.getElementById("work").style.fontFamily= "Courier New";
           // document.getElementById("work").style.color = "red";
 
@@ -1125,7 +1139,19 @@ function arabic_submit(){
                    // document.getElementById("work").style.color = "red";
 
                                                                                     }
+    else if (question.includes("القيمة")||(question.includes("الثمن"))){
+                     document.getElementById("work").innerHTML = arabic_appreciation;
+                    document.getElementById('frametest').src =  "https://www.youtube.com/embed/ctGKBxCBqbk?rel=0"  ;
+                   // document.getElementById("work").style.fontFamily= "Courier New";
+                   // document.getElementById("work").style.color = "red";
+
+                                                                                    }
   else {
+
+
+
+
+
     document.getElementById("work").innerHTML = "أنا أعمل على الإجابة عن المزيد من الأسئلة في المستقبل \
   "
   }
