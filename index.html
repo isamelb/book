@@ -405,6 +405,8 @@ muscle of patience'
 
 var nature='In the video above I explain why nature heals us'
 
+var recognition_emotion= 'In the video above I explain why recognition of emotion present is very important'
+
 var arabic_reality ='حاول أن تعيش في الواقع وليس في عالمك الشخصي ، شاهد الفيديو لمزيد من الشرح \
  '
 
@@ -1621,6 +1623,17 @@ function submitquestion(){
 
 
 
+}else if (question.includes("recognise")&&(question.includes("emotion"))) {
+   document.getElementById("work").innerHTML = recognition_emotion;
+   document.getElementById('frametest').src = "https://www.youtube.com/embed/i8b9GTRcOyk?rel=0"   ;
+   //document.getElementById("work").style.color = "red";
+  // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+
 }
 
 
@@ -1656,7 +1669,7 @@ function range(start, end) {
 
 function random_topic(){
 
-  var items =range(1,60);
+  var items =range(1,61);
 
   number_videos = items.length;
     document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -2130,6 +2143,16 @@ document.getElementById('frametest').src = "https://www.youtube.com/embed/vUE10r
   }else if (item ===60) {
      document.getElementById("work").innerHTML = nature;
      document.getElementById('frametest').src ="https://www.youtube.com/embed/zjoVbGSJBlo?rel=0" ;
+     //document.getElementById("work").style.color = "red";
+    // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+  }else if (item ===61) {
+     document.getElementById("work").innerHTML = recognition_emotion;
+     document.getElementById('frametest').src ="https://www.youtube.com/embed/i8b9GTRcOyk?rel=0"  ;
      //document.getElementById("work").style.color = "red";
     // document.getElementById("work").style.fontFamily= "Courier New";
 
