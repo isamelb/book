@@ -410,6 +410,10 @@ var recognition_emotion= 'In the video above I explain why recognition of emotio
 
 var appreciation='In the video above I hghlight the link between value, appreciation and gratitude'
 
+
+var placebo ='In the video above I explain the placebo, nocebo effects  \
+and their link to black magic'
+
 var arabic_reality ='حاول أن تعيش في الواقع وليس في عالمك الشخصي ، شاهد الفيديو لمزيد من الشرح \
  '
 
@@ -572,7 +576,9 @@ var arabic_appreciation='في الفديو اعلاه اربط بين الشكر
 '
 
 
-
+var arabic_placebo='في الفديو اعلاه اربط بين التاتير الوهمي و السحر و \
+السحرة \
+ '
 
 
 function ChangeLanguage(){
@@ -632,7 +638,7 @@ function ChangeLanguage(){
 
 function arabic_random(){
 
-var items =range(1,36);
+var items =range(1,37);
 
 number_videos = items.length;
   document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -891,6 +897,13 @@ if (item ===1){
           // document.getElementById("work").style.color = "red";
 
 
+  }else if (item===37){
+           document.getElementById("work").innerHTML = arabic_placebo
+           document.getElementById('frametest').src ="https://www.youtube.com/embed/RgxLF8gzx68?rel=0"  ;
+           //document.getElementById("work").style.fontFamily= "Courier New";
+          // document.getElementById("work").style.color = "red";
+
+
   }
 
 
@@ -1142,6 +1155,13 @@ function arabic_submit(){
     else if (question.includes("القيمة")||(question.includes("الثمن"))){
                      document.getElementById("work").innerHTML = arabic_appreciation;
                     document.getElementById('frametest').src =  "https://www.youtube.com/embed/ctGKBxCBqbk?rel=0"  ;
+                   // document.getElementById("work").style.fontFamily= "Courier New";
+                   // document.getElementById("work").style.color = "red";
+
+                                                                                    }
+    else if (question.includes("السحر")||(question.includes("السحرة"))){
+                     document.getElementById("work").innerHTML = arabic_placebo;
+                    document.getElementById('frametest').src = "https://www.youtube.com/embed/RgxLF8gzx68?rel=0"  ;
                    // document.getElementById("work").style.fontFamily= "Courier New";
                    // document.getElementById("work").style.color = "red";
 
@@ -1693,6 +1713,17 @@ function submitquestion(){
 
 
 
+}else if (question.includes("placebo")||(question.includes("magic"))) {
+   document.getElementById("work").innerHTML = placebo;
+   document.getElementById('frametest').src ="https://www.youtube.com/embed/n5TNUUDOUHM?rel=0" ;
+   //document.getElementById("work").style.color = "red";
+  // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+
 }
 
 
@@ -1728,7 +1759,7 @@ function range(start, end) {
 
 function random_topic(){
 
-  var items =range(1,62);
+  var items =range(1,63);
 
   number_videos = items.length;
     document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -2222,6 +2253,16 @@ document.getElementById('frametest').src = "https://www.youtube.com/embed/vUE10r
   }else if (item ===62) {
      document.getElementById("work").innerHTML = appreciation;
      document.getElementById('frametest').src ="https://www.youtube.com/embed/McMae28KTIg?rel=0"  ;
+     //document.getElementById("work").style.color = "red";
+    // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+  }else if (item ===63) {
+     document.getElementById("work").innerHTML = placebo;
+     document.getElementById('frametest').src ="https://www.youtube.com/embed/n5TNUUDOUHM?rel=0" ;
      //document.getElementById("work").style.color = "red";
     // document.getElementById("work").style.fontFamily= "Courier New";
 
