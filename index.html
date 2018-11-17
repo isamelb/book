@@ -414,6 +414,8 @@ var appreciation='In the video above I hghlight the link between value, apprecia
 var placebo ='In the video above I explain the placebo, nocebo effects  \
 and their link to black magic'
 
+var reasons ='In the video above I explain the reasons why I made this web app available publicly'
+
 var arabic_reality ='حاول أن تعيش في الواقع وليس في عالمك الشخصي ، شاهد الفيديو لمزيد من الشرح \
  '
 
@@ -1724,7 +1726,19 @@ function submitquestion(){
 
 
 
+}else if (question.includes("reasons")||(question.includes("reason"))) {
+   document.getElementById("work").innerHTML = reasons;
+   document.getElementById('frametest').src =  "https://www.youtube.com/embed/m0XbuVZRc3M?rel=0" ;
+   //document.getElementById("work").style.color = "red";
+  // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+
 }
+
 
 
 
@@ -1759,7 +1773,7 @@ function range(start, end) {
 
 function random_topic(){
 
-  var items =range(1,63);
+  var items =range(1,64);
 
   number_videos = items.length;
     document.getElementById("vnumber").innerHTML="number of videos available is: "+ number_videos;
@@ -2263,6 +2277,16 @@ document.getElementById('frametest').src = "https://www.youtube.com/embed/vUE10r
   }else if (item ===63) {
      document.getElementById("work").innerHTML = placebo;
      document.getElementById('frametest').src ="https://www.youtube.com/embed/n5TNUUDOUHM?rel=0" ;
+     //document.getElementById("work").style.color = "red";
+    // document.getElementById("work").style.fontFamily= "Courier New";
+
+
+
+
+
+  }else if (item ===64) {
+     document.getElementById("work").innerHTML = reasons;
+     document.getElementById('frametest').src ="https://www.youtube.com/embed/m0XbuVZRc3M?rel=0" ;
      //document.getElementById("work").style.color = "red";
     // document.getElementById("work").style.fontFamily= "Courier New";
 
